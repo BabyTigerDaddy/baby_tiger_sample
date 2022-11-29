@@ -17,7 +17,7 @@ class MainScreen extends StatelessWidget {
               icon: const Icon(Icons.menu),
               onPressed: () {},
             ),
-            title: const Text('App bar'),
+            title: const Text('baby tiger sample'),
             actions: [
               IconButton(
                 icon: const Icon(Icons.add_alert),

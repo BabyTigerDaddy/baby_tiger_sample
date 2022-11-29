@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:baby_tiger_sample/screens/widgets/listview_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:baby_tiger_sample/screens/main_screen.dart';
@@ -15,8 +16,25 @@ class _MaterialScreen extends State<MaterialScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return ListView(
-      children: const <Widget>[
+      children: <Widget>[
+        Card(
+          child: ListTile(
+            leading: const Icon(
+              Icons.list,
+              color: Colors.blue,
+              size: 32.0,
+            ),
+            title: const Text('ListView'),
+            subtitle: const Text('ListView widget'),
+            trailing: const Icon(Icons.more_vert),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ListViewPage()));
+            },
+          ),
+        ),
+        /*
         Card(child: ListTile(title: Text('One-line ListTile'))),
         Card(
           child: ListTile(
@@ -62,6 +80,7 @@ class _MaterialScreen extends State<MaterialScreen> {
             isThreeLine: true,
           ),
         ),
+         */
       ],
     );
   }
